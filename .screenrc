@@ -1,0 +1,32 @@
+# Always show a status line in the window footer
+hardstatus on
+hardstatus alwayslastline "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %D %d %M %Y %c:%s "
+
+# Autodetach session on hangup instead of
+# terminating screen completely
+autodetach on
+
+# Turn off the splash screen
+startup_message off
+
+# set log to off for all windows
+deflog off
+
+# vertical split
+bindkey "^n" eval "split -v" "focus" "screen"
+
+# horizontal split
+bindkey "^b" eval "split -h" "focus" "screen"
+
+# remove split
+bindkey "^x" eval "remove"
+
+# focus up/down/left/right
+bindkey "^j" focus down
+bindkey "^k" focus up
+bindkey "^h" focus left
+bindkey "^l" focus right
+
+#shell "/usr/local/bin/bash"
+escape ^t
+escape ^i
